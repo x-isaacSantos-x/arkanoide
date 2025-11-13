@@ -1,6 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Sedgwick+Ave&display=swap");
 body {
-  background-image: url(https://wallpapercave.com/wp/wp4646943.jpg);
+    background-image: url("/Background.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 .App {
   text-align: center;

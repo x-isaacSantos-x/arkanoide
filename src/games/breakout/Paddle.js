@@ -4,8 +4,8 @@ export default (ctx, canvas, paddleProps) => {
       this.x = x;
       this.y = canvas.height - 30;
       this.height = 20;
-      this.width = paddleProps.width;
-      this.colors = ["red", "#FFA62B"];
+      this.width = 150;
+      this.colors = ["blue", "#1e00ffff"];
     }
     move() {
       ctx.beginPath();

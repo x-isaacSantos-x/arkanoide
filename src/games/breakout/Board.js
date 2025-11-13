@@ -45,7 +45,7 @@ export default function Board() {
       if (player.lives === 0) {
         alert("Game Over! Press ok to restart");
 
-        player.lives = 5;
+        player.lives = 10;
         player.level = 1;
         player.score = 0;
         ResetBall(ballObj, canvas, paddleProps);
@@ -84,7 +84,7 @@ export default function Board() {
 
   return (
     <div style={{ textAlign: "center" }}>
-      <h1 className="gameHeader">Breakout Game</h1>
+      <h1 className="gameHeader">Akanoid Game</h1>
       <canvas
         id="canvas"
         ref={canvasRef}

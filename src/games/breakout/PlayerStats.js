@@ -1,10 +1,20 @@
 export default function PlayerStats(ctx, player, canvas) {
-  // Name
+  // 🎯 Lógica para ganhar uma vida a cada 100 pontos
+  if (player.score > 0 && player.score % 100 === 0 && !player._lifeGiven) {
+    player.lives += 1;
+    player._lifeGiven = true; // evita ganhar várias vidas no mesmo ponto
+    console.log("Ganhou uma vida! ❤️");
+  } else if (player.score % 100 !== 0) {
+    // quando sai do múltiplo de 100, libera novamente
+    player._lifeGiven = false;
+  }
+
+  // 🧍‍♂️ Nome do jogador
   ctx.font = "20px Arial";
   ctx.fillStyle = "white";
   ctx.fillText(`Name: ${player.name}`, 20, 30);
 
-  // Lives
+  // ❤️ Vidas
   ctx.font = "20px Arial";
   ctx.fillStyle = "red";
   let gap = 0;
@@ -13,7 +23,7 @@ export default function PlayerStats(ctx, player, canvas) {
     gap += 30;
   }
 
-  // Score
+  // 💯 Pontuação
   ctx.font = "20px Arial";
   ctx.fillStyle = "white";
   ctx.fillText(`Score: ${player.score}`, canvas.width - 140, 30);

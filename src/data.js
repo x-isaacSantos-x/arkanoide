@@ -1,3 +1,15 @@
+export const data = {
+  ballObj: {
+    x: 20,
+    y: 200,
+    dx: 1, // ← velocidade horizontal
+    dy: -1, // ← velocidade vertical
+    rad: 10,
+    speed: 1,
+  },
+};
+
+
 export default {
   ballObj: {
     x: 20,
